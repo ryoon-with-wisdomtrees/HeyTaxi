@@ -1,9 +1,14 @@
+"use client";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      ㅇㅇ
-    </main>
+    <div>
+      <div className="grid grid-cols-3">
+        {" "}
+        <div className="bg-blue-100">Booking</div>
+        <div className="col-span-2 bg-red-100"> Map</div>
+      </div>
+    </div>
   );
 }
