@@ -13,6 +13,7 @@ const Booking = (props: Props) => {
         style={{ height: screenHeight }}
       >
         <AutoCompleteAdress />
+        {/**이부분에 MapBox search api implement */}
       </div>
     </div>
   );
