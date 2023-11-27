@@ -13,7 +13,7 @@ export default function Home() {
         <div className="">
           <Booking />
         </div>
-        <div className="col-span-2 bg-red-100 ">Map</div>
+        <div className="col-span-2">Map</div>
       </div>
     </div>
   );

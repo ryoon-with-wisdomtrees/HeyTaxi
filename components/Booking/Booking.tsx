@@ -1,6 +1,5 @@
-"use client";
 import React, { useEffect } from "react";
-import AutoCompleteAdress from "./AutoCompleteAdress";
+import AutoCompleteAddress from "./AutoCompleteAddress";
 
 type Props = {};
 
@@ -16,7 +15,7 @@ const Booking = (props: Props) => {
         className="border-[1px] p-5 rounded-md"
         style={{ height: innerHeight }}
       >
-        <AutoCompleteAdress />
+        <AutoCompleteAddress />
         {/**이부분에 MapBox search api implement */}
       </div>
     </div>
