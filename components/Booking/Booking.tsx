@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AutoCompleteAddress from "./AutoCompleteAddress";
 import Cars from "./Cars";
+import Cards from "./Cards";
 
 type Props = {};
 
@@ -19,6 +20,15 @@ const Booking = (props: Props) => {
         <AutoCompleteAddress />
         {/**이부분에 MapBox search api implement */}
         <Cars />
+        <Cards />
+        <button
+          className="w-full
+         bg-yellow-400
+        p-1 rounded-md
+        mt-4 hover:text-white"
+        >
+          Book
+        </button>
       </div>
     </div>
   );
