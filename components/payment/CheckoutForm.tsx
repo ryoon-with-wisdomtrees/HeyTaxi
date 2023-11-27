@@ -40,7 +40,7 @@ const CheckoutForm = ({ amount }: any) => {
       elements,
       confirmParams: {
         // Return URL where the customer should be redirected after the PaymentIntent is confirmed.
-        return_url: "http://localhost:3000/",
+        return_url: "https://hey-taxi.vercel.app/",
       },
     });
   };
