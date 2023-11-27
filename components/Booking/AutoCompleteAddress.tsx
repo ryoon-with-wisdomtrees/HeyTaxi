@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { DestinationCordiContext } from "@/context/DestinationCordiContext";
 import { SourceCordiContext } from "@/context/SourceCordiContext";
+import { MAPBOX_RETRIVE_URL, SESSION_TOKEN } from "@/utils/constants";
 
 type Props = {};
 const session_token = "0e046701-55c5-4561-88c0-fe8ed190a09f";
-const MAPBOX_RETRIVE_URL =
-  "https://api.mapbox.com/search/searchbox/v1/retrieve/";
 
 const AutoCompleteAddress = (props: Props) => {
   const [source, setSource] = useState<any>("");
@@ -52,7 +51,7 @@ const AutoCompleteAddress = (props: Props) => {
       MAPBOX_RETRIVE_URL +
         item.mapbox_id +
         "?session_token=" +
-        session_token +
+        SESSION_TOKEN +
         "&access_token=" +
         process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
     );
