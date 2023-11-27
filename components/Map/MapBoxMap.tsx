@@ -10,6 +10,7 @@ import { DestinationCordiContext } from "@/context/DestinationCordiContext";
 import { MAPBOX_DRIVING_ENDPOINT } from "@/utils/constants";
 import { DirectionDataContext } from "@/context/DirectionDataContext";
 import MapBoxDrawRoute from "./MapBoxDrawRoute";
+import DistanceTime from "./DistanceTime";
 
 type Props = {};
 
@@ -77,7 +78,7 @@ const MapBoxMap = (props: Props) => {
     <div>
       <h2 className="text-[20px] font-semibold">Map</h2>
       <div className="rounded-lg overflow-hidden">
-        {userLocation !== null ? (
+        {userLocation !== null && (
           <>
             <Map
               ref={mapRef}
@@ -99,9 +100,10 @@ const MapBoxMap = (props: Props) => {
               )}
             </Map>
           </>
-        ) : (
-          <></>
         )}
+      </div>
+      <div className="absolute bottom-[40px] z-20 right-[20px] hiddem md:block">
+        <DistanceTime />
       </div>
     </div>
   );

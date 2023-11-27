@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AutoCompleteAddress from "./AutoCompleteAddress";
 import Cars from "./Cars";
 import Cards from "./Cards";
+import { useRouter } from "next/navigation";
+import { CarSelectedAmountContext } from "@/context/CarSelectedAmountContext";
 
 type Props = {};
 
@@ -9,6 +11,9 @@ const Booking = (props: Props) => {
   useEffect(() => {
     const innerHeight = window.innerHeight * 0.72;
   }, []);
+  const [amount, setAmount] = useState<any>();
+  const router: any = useRouter();
+  const { carAmount, setCarAmount } = useContext(CarSelectedAmountContext);
   //const screenHeight = window.innerHeight * 0.72; //스크롤업애기위해 일정 비율 곱하기
   return (
     <div className="p-5">
@@ -22,10 +27,14 @@ const Booking = (props: Props) => {
         <Cars />
         <Cards />
         <button
-          className="w-full
-         bg-yellow-400
+          className={`w-full
+         
         p-1 rounded-md
-        mt-4 hover:text-white"
+        mt-4 hover:text-white ${!carAmount ? "bg-gray-200" : "bg-yellow-400"}`}
+          disabled={!carAmount}
+          onClick={() => {
+            router.push("/payment");
+          }}
         >
           Book
         </button>
