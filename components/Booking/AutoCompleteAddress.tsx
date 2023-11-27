@@ -59,6 +59,7 @@ const AutoCompleteAddress = (props: Props) => {
 
     const result = await res.json();
 
+    console.log("onSourceAddressClick result\n", result);
     setSourceCordinates({
       lng: result.features[0].geometry.coordinates[0],
       lat: result.features[0].geometry.coordinates[1],
