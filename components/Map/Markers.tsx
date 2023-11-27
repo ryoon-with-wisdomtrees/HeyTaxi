@@ -28,7 +28,7 @@ const Markers = (props: Props) => {
         )}
 
       {/** 출발지 마커*/}
-      {soruceCordinates.length != 0 && (
+      {soruceCordinates.length > 0 && (
         <Marker
           longitude={soruceCordinates?.lng}
           latitude={soruceCordinates?.lat}
@@ -38,7 +38,7 @@ const Markers = (props: Props) => {
         </Marker>
       )}
       {/** 도착지 마커*/}
-      {destinationCordinates.length != 0 && (
+      {destinationCordinates.length > 0 && (
         <Marker
           longitude={destinationCordinates?.lng}
           latitude={destinationCordinates?.lat}
