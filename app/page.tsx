@@ -9,6 +9,7 @@ import { DestinationCordiContext } from "@/context/DestinationCordiContext";
 import { DirectionDataContext } from "@/context/DirectionDataContext";
 import { SourceCordiContext } from "@/context/SourceCordiContext";
 import { UserLocationContext } from "@/context/UserLocationContext";
+import MapBoxMap from "@/components/Map/MapBoxMap";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<any>();
@@ -31,7 +32,9 @@ export default function Home() {
                 <div className="">
                   <Booking />
                 </div>
-                <div className="col-span-2">Map</div>
+                <div className="col-span-2">
+                  <MapBoxMap />
+                </div>
               </div>
             </DirectionDataContext.Provider>
           </DestinationCordiContext.Provider>

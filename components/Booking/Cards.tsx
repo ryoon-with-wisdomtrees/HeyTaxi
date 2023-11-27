@@ -12,6 +12,7 @@ const Cards = (props: Props) => {
       <div className="grid grid-cols-5 mt-2 pl-2">
         {CardsList.map((item, index) => (
           <div
+            key={index}
             onClick={() => {
               setActiveIndex(index);
             }}
