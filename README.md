@@ -1,36 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Hey-taxi(헤이택시)](https://hey-taxi.vercel.app/)
 
-## Getting Started
+<img width="80%" src="./public/hey-taxi.gif"/>
 
-First, run the development server:
+## 제작과정
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 기술스택 - Next.js 13, React.js, Tailwind CSS, Mapbox, MapboxGl, react-map-gl, ContextProvicer and Stripe.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 제작기간 - 3일
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+이 헤이택시(Full Stack Uber Clone Web App)는 [React NextJs 13 Taxi Booking App : NextJs 13, Tailwind Css, Typescript, Mapbox, Stripe | Full Course](https://youtu.be/1DXV4LCWkic?list=PLzRr9la40O_RQIXxWO_VNmA8y9qRUeuK9)유튜브강의를 참고하여 에러사항과 작업날짜 기준 deprecated된 부분 및 미흡한 부분, 그리고 한국에서 지원되지 않는 부분에 대한 이슈들을 보강하고 수정하고 커스터마이징하여 제작한 웹앱입니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+이 앱 역시 Mapping library에 대한 사용 및 발전 경험을 얻고 싶어서 제작한 웹앱이었습니다. 비교하기는 섣부르지만, google map보다 훨씬 유려한 ui와 다양하게 사용할 수 있는 서비스등이 있어서 내내 재미에 푹 빠져 작업할 수 있었습니다.
