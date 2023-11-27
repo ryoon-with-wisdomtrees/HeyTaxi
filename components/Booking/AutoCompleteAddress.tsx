@@ -44,6 +44,7 @@ const AutoCompleteAddress = (props: Props) => {
   };
 
   const onSourceAddressClick = async (item: any) => {
+    console.log(item);
     setSource(item.full_address);
     setAddressList([]);
     setSourceChange(false);
@@ -66,6 +67,7 @@ const AutoCompleteAddress = (props: Props) => {
   };
 
   const onDestinationAddressClick = async (item: any) => {
+    console.log(item);
     setDistination(item.full_address);
     setAddressList([]);
     setDestinationChange(false);
@@ -110,7 +112,7 @@ const AutoCompleteAddress = (props: Props) => {
             absolute w-full bg-white z-[9000]"
           >
             {addressList?.suggestions.map((item: any, index: number) => {
-              // console.log("{item}", item);
+              console.log("{item}", item);
               return (
                 <div
                   className="p-3  z-[9999] text-neutral-900 hover:bg-gray-100

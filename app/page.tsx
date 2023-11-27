@@ -12,7 +12,21 @@ import { UserLocationContext } from "@/context/UserLocationContext";
 import MapBoxMap from "@/components/Map/MapBoxMap";
 
 export default function Home() {
-  const [userLocation, setUserLocation] = useState<any>();
+  const [userLocation, setUserLocation] = useState<any>(null);
+
+  useEffect(() => {
+    getUserLocation();
+  }, []);
+  const getUserLocation = () => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log("position:", position);
+      setUserLocation({
+        lat: position!.coords!.latitude,
+        lng: position!.coords!.longitude,
+      });
+    });
+  };
+
   const [soruceCordinates, setSourceCordinates] = useState<any>([]);
   const [destinationCordinates, setDestinationCordinates] = useState<any>([]);
   const [directionData, setDirectionData] = useState<any>([]);
