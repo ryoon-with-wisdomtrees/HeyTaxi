@@ -115,6 +115,7 @@ const AutoCompleteAddress = (props: Props) => {
               console.log("{item}", item);
               return (
                 <div
+                  key={index}
                   className="p-3  z-[9999] text-neutral-900 hover:bg-gray-100
                 cursor-pointer"
                 >
@@ -156,6 +157,7 @@ const AutoCompleteAddress = (props: Props) => {
           >
             {addressList?.suggestions.map((item: any, index: number) => (
               <div
+                key={index}
                 className="p-3 z-[9999] text-neutral-900 hover:bg-gray-100
                             cursor-pointer"
               >

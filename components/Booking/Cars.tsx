@@ -10,6 +10,7 @@ function Cars() {
   const { carAmount, setCarAmount } = useContext(CarSelectedAmountContext);
 
   const getCost = (charges: any) => {
+    console.log(directionData.routes[0].distance);
     return (
       charges *
       directionData.routes[0].distance *
