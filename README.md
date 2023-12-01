@@ -1,6 +1,6 @@
 # [Hey-taxi(헤이택시)](https://hey-taxi.vercel.app/)
 
-<img width="80%" src="./public/hey-taxi.gif"/>
+<img width="100%" src="./public/hey-taxi.gif"/>
 
 ## 제작과정
 
