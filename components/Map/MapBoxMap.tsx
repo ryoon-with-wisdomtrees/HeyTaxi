@@ -76,7 +76,7 @@ const MapBoxMap = (props: Props) => {
 
   return (
     <div>
-      <h2 className="text-[20px] font-semibold">Map</h2>
+      <h2 className="text-[20px] font-semibold mb-2">Map</h2>
       <div className="rounded-lg overflow-hidden">
         {userLocation !== null && (
           <>

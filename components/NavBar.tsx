@@ -15,10 +15,11 @@ function NavBar() {
       >
         <div className="flex gap-10 items-center">
           <Image
-            src="/logo.png"
+            src="/hey-taxi.png"
             alt="logo"
-            width={120}
-            height={60}
+            width={100}
+            height={100}
+            className="rounded-md"
             onClick={() => {
               router.push("/");
             }}

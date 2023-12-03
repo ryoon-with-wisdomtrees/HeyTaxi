@@ -11,9 +11,15 @@ import { SourceCordiContext } from "@/context/SourceCordiContext";
 import { UserLocationContext } from "@/context/UserLocationContext";
 import MapBoxMap from "@/components/Map/MapBoxMap";
 import { CarSelectedAmountContext } from "@/context/CarSelectedAmountContext";
-
+import { useUser } from "@clerk/clerk-react";
+import { redirect } from "next/navigation";
 export default function Home() {
+  const { isSignedIn, user, isLoaded } = useUser();
   const [userLocation, setUserLocation] = useState<any>(null);
+
+  if (!isSignedIn) {
+    redirect("/sign-in");
+  }
 
   useEffect(() => {
     getUserLocation();
@@ -47,7 +53,7 @@ export default function Home() {
               <CarSelectedAmountContext.Provider
                 value={{ carAmount, setCarAmount }}
               >
-                <div className="grid grid-cols-1 md:grid-cols-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 bg-white">
                   <div className="">
                     <Booking />
                   </div>

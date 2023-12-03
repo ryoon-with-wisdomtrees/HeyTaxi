@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import {
+  Inter,
+  Outfit,
+  Nanum_Gothic,
+  Nanum_Brush_Script,
+  Nanum_Pen_Script,
+} from "next/font/google";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, currentUser } from "@clerk/nextjs";
 import NavBar from "@/components/NavBar";
+import { redirect } from "next/navigation";
 
-const outfit = Outfit({ subsets: ["latin"] });
+const outfit = Nanum_Pen_Script({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Hey Taxi",
@@ -16,6 +23,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // const user = await currentUser();
+  // if (!user) {
+  //   redirect("/sign-in");
+  // }
   return (
     <ClerkProvider>
       <html lang="en">
