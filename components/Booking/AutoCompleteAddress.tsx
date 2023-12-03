@@ -101,7 +101,7 @@ const AutoCompleteAddress = (props: Props) => {
                 focus:border-yellow-300 text-[14px]"
           value={source}
           onChange={(e) => {
-            console.log("e.target.value:", e.target.value);
+            // console.log("e.target.value:", e.target.value);
             setSource(e.target.value);
             setSourceChange(true);
           }}
